@@ -25,9 +25,9 @@ The repo includes:
   - `cells` – Holds all cell PNGs used in rendering  || [cells](cells)
 
 - **Other files:**
-  - `cell_mapping.json`[cell_mapping.json](cell_mapping.json) – Maps 4-letter cell codes (e.g., `HART`, `SPIK`, `SEEK`) to icon PNGs and `-optional colors-` **read bug section to see**
-  - `overlay.png`[overlay.png](overlay.png) – The rendered overlay that updates alongside your `.bod`
-  - `README.md`[README.md](README.md) – This document
+  - cell_mapping.json](cell_mapping.json) – Maps 4-letter cell codes (e.g., `HART`, `SPIK`, `SEEK`) to icon PNGs and `-optional colors-` **read bug section to see**
+  -[overlay.png](overlay.png) – The rendered overlay that updates alongside your `.bod`
+  - [README.md](README.md) – This document
 
 ---
 
