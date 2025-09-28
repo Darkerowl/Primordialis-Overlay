@@ -1,6 +1,6 @@
-# Primordialis Overlay – `config.py` reference
+# Primordialis Overlay – `config.py`
 
-This document explains every setting in **config.py** and how it affects rendering or behavior. Use it as a README section for your GitHub repo.
+This document explains every setting in **config.py** and how it affects rendering or behavior.
 
 ---
 
@@ -72,7 +72,7 @@ This document explains every setting in **config.py** and how it affects renderi
   If `True`, rotation pivots around the grid’s bounding box center instead of the image center.
 
 - **`MANUAL_ROTATE_STEPS`** *(int)*  
-  Extra rotation applied in **30° steps** (each step = 30°). E.g., `7` → 210°. Combined with the save’s `half_hex_rotation`.
+  Extra rotation applied in **30° steps** (each step = 30°). E.g., `7` → 210°. Combined with the save’s `half_hex_rotation`. `7` I found to be exactly ingame look in rotation in my testing.
 
 ---
 
