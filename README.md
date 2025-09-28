@@ -1,6 +1,14 @@
 # Primordialis Overlay
 
 This project provides a live overlay renderer for **Primordialis**, reading the game’s `.bod` save file and producing an **overlay.png** that can be displayed in OBS or other streaming software. This version is considered **beta**: functionality works, but visuals and performance may improve in future updates.
+**This is all done in Pyton 3.13 but should work in Python 3.10 and 3.0 but you have to make sure you download the correct plugins so you can run the mod correctly** ***python 2.0 may work also but idk***
+*Python needs these to run my code, I almost forgot* 
+This will install the following dependencies:
+- `watchdog` → watches for .bod file changes in real time.
+- `lz4` → decompresses the .bod save file.
+- `pillow` → handles PNG image rendering and icons.
+- `numpy` → used for math, arrays, and checksum detection.
+# To download its very easy
 
 ---
 
