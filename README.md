@@ -21,13 +21,13 @@ The repo includes:
   - [run_watch.bat](run_watch.md)
 
 - **Folders:**
-  - `__pycache__` – Python cache files
-  - `cells/` – Holds all cell PNGs used in rendering
+  - `__pycache__` – Python cache files || [pycache](__pycache__)
+  - `cells` – Holds all cell PNGs used in rendering  || [cells](cells)
 
 - **Other files:**
-  - `cell_mapping.json` – Maps 4-letter cell codes (e.g., `HART`, `SPIK`, `SEEK`) to icon PNGs and `-optional colors-` **read bug section to see**
-  - `overlay.png` – The rendered overlay that updates alongside your `.bod`
-  - `README.md` – This document
+  - `cell_mapping.json`[cell_mapping.json](cell_mapping.json) – Maps 4-letter cell codes (e.g., `HART`, `SPIK`, `SEEK`) to icon PNGs and `-optional colors-` **read bug section to see**
+  - `overlay.png`[overlay.png](overlay.png) – The rendered overlay that updates alongside your `.bod`
+  - `README.md`[README.md](README.md) – This document
 
 ---
 
@@ -35,7 +35,7 @@ The repo includes:
 
 You can keep the files anywhere you like. Make backups if you plan to edit.
 
-⚠️ **Important:** You must edit `config.py` to match your system paths.
+⚠️ **Important:** You must edit [Config.py](config.py) to match your system paths.
 
 ### Editing `config.py`
 
@@ -60,10 +60,7 @@ MAPPING_JSON = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\cell_m
 
 👉 Fast way to get to `%AppData%`: press **Win+R**, type `%AppData%/Primordialis/save`, and hit **Enter**.
 
-
-
-
-`ICONS_DIR` should point to the `cells/` folder containing your PNGs.
+`ICONS_DIR` should point to the [cells](cells) folder containing your PNGs.
 
 ---
 
@@ -182,7 +179,7 @@ This document explains every setting in **config.py** and how it affects renderi
 
 ---
 
-## Paths
+## Paths inside python script.
 - **`BOD_PATH`** *(str)*  
   Full path to the game’s `player.bod` save file that the watcher reads.
 
@@ -332,20 +329,20 @@ python main.py --watch --bod "C:\Users\YOUR_USERNAME\AppData\Roaming\Primordiali
 
 # Batch file code:`.bat`
 
-[run_watch](Primordialis overlay/run_watch.md)
+[run_watch](run_watch.md)
 ```
 @echo off
 python main.py --watch
 pause
 ```
 
-[run_once](Primordialis overlay/run_once.bat)
+[run_once](run_once.bat)
 ```batch
 @echo off
 python main.py --once
 ```
 
-[run_once_no_icons](Primordialis overlay/run_once_no_icons.bat)
+[run_once_no_icons](run_once_no_icons.bat)
 ```batch
 @echo off
 python main.py --once --no-icons
@@ -374,5 +371,5 @@ Explained in [readme.md](readme.md)
 }  
 ```
 
-Place icons in `ICONS_DIR`. Relative icon paths are resolved against `cell_mapping.json` directory.
-[cell_mapping.json](cell_mapping.json)
+Place icons in `ICONS_DIR`. Relative icon paths are resolved against [cell_mapping.json](cell_mapping.json) directory.
+**end**
