@@ -196,4 +196,4 @@ Explained in [readme.md](main/readme.md)
 ```
 
 Place icons in `ICONS_DIR`. Relative icon paths are resolved against `cell_mapping.json` directory.
-[cell_mapping.json](Primordialis-Overlay/cell_mapping.json)
+[cell_mapping.json](cell_mapping.json)
