@@ -9,16 +9,16 @@ This project provides a live overlay renderer for **Primordialis**, reading the 
 The repo includes:
 
 - **Python files:**
-  - `config.py` – Your paths and tunable settings
-  - `main.py` – CLI entrypoint (`--once`, `--watch`, `--bod`, `--out`, `--no-icons`)
-  - `bod_parser.py` – Reads/decompresses/parses `.bod`
-  - `render.py` – Hex math, colors, icons, combos, PNG writing
-  - `watcher.py` – Watchdog + debounce + checksum
+  - [Config.py](config.py) – Your paths and tunable settings
+  - [main.py](main.py) – CLI entrypoint (`--once`, `--watch`, `--bod`, `--out`, `--no-icons`)
+  - [bod_parser.py](bod_parser.py) – Reads/decompresses/parses `.bod`
+  - [render.py](render.py) – Hex math, colors, icons, combos, PNG writing
+  - [watcher.py](watcher.py) – Watchdog + debounce + checksum
 
 - **Batch files (.bat):**
-  - `run_once.bat`
-  - `run_once_no_icons.bat`
-  - `run_watch.bat`
+  - [run_once.bat](run_once.bat)
+  - [run_once_no_icons.bat](run_once_no_icons.bat)
+  - [run_watch.bat](run_watch.md)
 
 - **Folders:**
   - `__pycache__` – Python cache files
@@ -307,6 +307,7 @@ For each cell:
   ***this is one way that I have thought of doing the code to be used with combo cells, this will put the 2 icons for `cells .png` in `cells` folder side by side in a mini format***
    I was having issues getting my code to read the hex created by combo cells. The dev does explain how he put in and does combo cells in 
    `C:\Program Files (x86)\Steam\steamapps\common\Primordialis\data\documentation` `bod_file_format` but its much different to how normals cells are read out in `hex`.
+  
    *for example:hex*
 
    ```hex
@@ -329,27 +330,27 @@ For each cell:
 python main.py --watch --bod "C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\player.bod" --out overlay.png
 ```
 
-# Batch file code:
+# Batch file code:`.bat`
 
-**run_watch.bat**
+[run_watch](Primordialis overlay/run_watch.md)
 ```
 @echo off
 python main.py --watch
 pause
 ```
 
-**run_once.bat**
+[run_once](Primordialis overlay/run_once.bat)
 ```batch
 @echo off
 python main.py --once
 ```
 
-**run_once_no_icons.bat**
+[run_once_no_icons](Primordialis overlay/run_once_no_icons.bat)
 ```batch
 @echo off
 python main.py --once --no-icons
 ```
-Explained in [readme.md](main/readme.md)
+Explained in [readme.md](readme.md)
 
 ---
 
@@ -374,4 +375,4 @@ Explained in [readme.md](main/readme.md)
 ```
 
 Place icons in `ICONS_DIR`. Relative icon paths are resolved against `cell_mapping.json` directory.
-[cell_mapping.json](main\cell_mapping.json)
+[cell_mapping.json](cell_mapping.json)
