@@ -16,10 +16,10 @@ logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s %(levelname)s: %(messag
 
 def _depcheck() -> None:
     """
-    Silent preflight: ensure Python version and required deps are present.
+    Silent preflight: 
     - Requires Python 3.8–3.13.
-    - If a dependency is missing, exit with a clear message telling the user to run
-      Required_downloads.py or pip install the packages.
+    - If a dependency is missing, exit and run
+      Required_downloads.bat or input pip install the packages Found in readme.txt.
     """
     major, minor = sys.version_info[:2]
     if not (major == 3 and 8 <= minor <= 13):
