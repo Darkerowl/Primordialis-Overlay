@@ -181,6 +181,7 @@ Future improvements may include:
 - More CLI overrides (`--hex-size`, `--rotate-steps`, etc.)
 - Smarter caching for icons/colors
 ## Bugs
+- Missing .png for the cells inside Beta version of the game, | `Impact_cell` | `Ink_cell` | `Wandering_neuron` | `Electromagnetic_cell` |  These cells were not in the wiki which is were I got my photos for the cells from, I can make some .PNG real fast.
 - There is a known issue with Combo cells right now, im working to fix this issue, I just need a photo of every combo cell type in `85x85` pixel res, this would allow me to put those photos into `cells` folder and write code for them into `cell_mapping.json` this file is what tells my code through hex from `.bod`  to which `.png` to grab from `cells` folder.
 - this is how I had my code setup for early testing way before I split the files and still had this code inside the `.py` files. I was thinking about doing more testing on this front since combo cells are a more uniqe form in game and truly could have unlimited possibilities, I was also thinking of just changing the script to know when a combo cell is being used and pull the icon from the `cells` folder and put them all into 1 hexagon, my worry with this is it may become to small and hard to see. 
 ```JSON
