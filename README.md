@@ -388,4 +388,19 @@ Explained in [readme.md](readme.md)
 ```
 
 Place icons in `ICONS_DIR`. Relative icon paths are resolved against [cell_mapping.json](cell_mapping.json) directory.
+---
 **end**
+---
+#Tip 
+---
+***Links*** *click images to go to them*
+
+[![StreamElements tips](https://github.com/user-attachments/assets/d48d44a4-8b9d-400e-acc0-787cdd35aee5)](https://streamelements.com/darkerowls/tip)
+
+ [<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/00d3b098-1ca2-4507-9fc4-b272d2257cf5" />](https://www.twitch.tv/darkerowls)
+
+ ---
+ **Ony if if you think its worth it↓!**
+`https://streamelements.com/darkerowls/tip`
+
+**Or you can follow/sub to my** `twitch.tv/darkerowls`!
