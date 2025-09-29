@@ -2,7 +2,8 @@
 
 This project provides a live overlay renderer for **Primordialis**, reading the game’s `.bod` save file and producing an **overlay.png** that can be displayed in OBS or other streaming software. This version is considered **beta**: functionality works, but visuals and performance may improve in future updates.
 
-**This is all done in Pyton 3.13**
+#### Must have Python 3.8 and up to use this mod
+**This is all coded in in Pyton 3.13** 
 
 ---
 
@@ -15,13 +16,13 @@ The repo includes:
   - [bod_parser.py](bod_parser.py) – Reads/decompresses/parses `.bod`
   - [render.py](render.py) – Hex math, colors, icons, combos, PNG writing
   - [watcher.py](watcher.py) – Watchdog + debounce + checksum
-  - [required_downloads.py](required_downloads.py) - This is a `.py script` that will download the right `Python` for you and the `deps`, just a easy and fast way to do it if the `.bats` fail for some reason see (**-Setup Info**) bellow for full breakdown.
+  - [required_downloads.py](required_downloads.py) - This is a `.py script` that will check that you have the right `Python` and `deps`.
 
   -  **Batch files (.bat):**
   - [run_once.bat](run_once.bat)
   - [run_once_no_icons.bat](run_once_no_icons.bat)
   - [run_watch.bat](run_watch.md)
-  - [Install_requirments.bat](iInstall_requirments.bat) - go to (**-Setup Info**) bellow for info on this.
+  - [Install_requirments.bat](iInstall_requirments.bat) - Downloads the Deps for Python through `CMD`.
   - 
 - **Folders:**
   - `__pycache__` – Python cache files || [pycache](__pycache__)
@@ -41,12 +42,12 @@ The repo includes:
 You can keep the files anywhere you like. Make backups if you plan to edit.
 --
 ### ⚠️ Important: 
-- Python `3.8-3.15` will work make sure you download Python so the mod will run correctly. *Python `2.0`-> `3.0-3.7` is not supported anymore or the used deps are not on those versions,use at own risk bellow `PY_3.8`.*
+- Python `3.8-3.15`is required make sure you download `Python` so the mod will run correctly. *Python `2.0`-> `3.0-3.7` is not supported anymore or the used deps are not on those versions, use at own risk bellow `PY_3.8`.
 - Next `main.py` does a check for Pyton 3.8-3.13 and the deps, having none of the deps or Python downloaded will trigger a warning↓. 
 ---
 ### ⚠️ **Must know**↓  
-- If you`launch`-|-|->`run_watch.bat`-or->`run_once.bat`-or->`run_once_no_incons.bat`-|> any one of them first.| They all run [main.py](main.py) which has the codeset to prompt `(y/n)` asking you to confirm. *I thought it would me a little innapropriate for me to force download files to your pc without your permission or knowlege*
-- If `y` the downloads will start in a bash(`CMD`) window, if `n` you will get a message asking you to download the required files on your own. [required_downloads.py](required_downloads.py) , [Install_requirments.bat](iInstall_requirments.bat) *are for if needed.*
+- If you`launch`-|-|->`run_watch.bat`-or->`run_once.bat`-or->`run_once_no_incons.bat`-|> any one of them first.| They all run [main.py](main.py)  with  [required_downloads.py](required_downloads.py) which has a set prompt and a `(y/n)` asking you to confirm. *I thought it would me a little innapropriate for me to download python deps onto your pc without permission, no matter how small and harmless they maybe*
+- If `y` the downloads will start in a bash(`CMD`) window, if `n` you will get a message asking you to download the required files on your own. , [Install_requirments.bat](iInstall_requirments.bat) and instal "Python 3.13"
 ---
 
 ---
