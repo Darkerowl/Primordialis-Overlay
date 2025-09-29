@@ -1,9 +1,24 @@
 Read me
 BOD_WATCHER_Overlay_INFO Primordialis Overlay Split (v.5) This would be considered Beta since I have it working how I want but the look and way it behaves isn't perfect, there will be more updates.
 
+Make sure you have Python 3.0 downloaded and the dependencies also 
+
+Copy and paste into powershell or comand prompt.
+ !(not needed if you just run_watch -once -once_no_incons.bat) it they all run main.py which has the code for a prompt that will ask you to confirm its okay that the files download, ( I thought it would me a little innapropriate for me to force download files to your pc without your permission or knowlege)
+_________
+pip install watchdog lz4 pillow numpy
+pip install black pylint
+__________
+
+-There is also new files to main.py and 2 files you can use to download the deps if needed( those will be redundant and not needed if you did it on your own or run--watch.bat which will prompt you to download what is needed.
+The files are only if you are having issues with the prompt when you start the program. Just have to cover what bases I can, I just hope its not to much.
+
 5 .py files, 3 .bat files, 2 folders, 1 .json file, 1 png, 1 Read me.
 Python: config.py, main.py, bod_parser.py, render.py, watcher.py
 .bat files: run_once.bat, run_once_no_icons.bat, run_watch.bat 
+-required_downloads.py ( will download the deps and also python in the right version)  !(not needed if you just run_watch -once -once_no_incons.bat)
+-Install_requirments.bat ( only instals the deps) !(not needed if you just run_watch -once -once_no_incons.bat)
+
 Folders: _pycache_ , cells
 Others:  Cell_mapping.json, Overlay.png.
 
@@ -112,4 +127,5 @@ Only functional additions vs your single-file script: argument parsing + --once/
 Keep your existing cell_mapping.json and icons folder as-is.
 You can still tweak parameters in config.py without touching code.
 If you want, we can add more CLI overrides later (e.g., --hex-size, --rotate-steps ect).
+
 If you want explicit colors for any cell, just add "color": "#RRGGBB" next to "icon" for that entry.
