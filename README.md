@@ -199,15 +199,7 @@ Future improvements may include:
 ---
 - Another bug I have is the Icon are not quite as centered in the hexagons as I would like, the **icons** I used are from the Wiki page were I used a script to scrape the page and download them for me, I then removed the background from each image and saved them. But this creates a issue were each `.png` file is not `85x85` like I would want it to be, I can work to fix this also or if I can somehow find out were the dev keeps the images for the ingame icon files, I have zero idea were.
 - the colors for behind the **icons** in the hexagons, well the colors are pretty much random and have zero bearing on each cell, this can be changed and each cell van have a specified color very easily. In `cell_mapping.json`  you can add:  Preferred JSON format (example):`"color": "#A0C8FF",` added to the `.json` file for each cell this will tell my code that this ***hexagon***  needs to be this color if X cell is in that location.
-```JSON
-{
-  "BODY": { "color": "#A0C8FF", "icon": "Cell_Basic.png" },
-  "SPIK": { "color": "#ffffff",  "icon": "Cell_spike.png" },
- "LIGT": { "color": "#E9E7A1", "icon": "Cell_lightweight.png" },
- "BODY+SPIK": { "color": "#FFD888", "icon": "Cell_Combo.png" }
-}  
-```
-this is how I had my code setup for early testing way before I split the files and still had this code inside the `.py` files. I was thinking about doing more testing on this front since combo cells are a more uniqe form in game and truly could have unlimited possibilities, I was also thinking of just changing the script to know when a combo cell is being used and pull the icon from the `cells` folder and put them all into 1 hexagon, my worry with this is it may become to small and hard to see. 
+
 '''
 - Hexgon spacing my not seem exactly perfect depending on what your screen size and look it, I did testing in other resolutions, but if they space between each hex is wrong or not looking right, go to `config.py` to fix and read `primordialis config explained.md` [primordialis config explained.md]("Primordialis Overlay Mod\primordialis config explained.md") to know what all settings do. these settings will allow for changed in this manor can be edited ` 1, 0.1, 0.01, 0.001` anything less will be to small to see, bigger is drastic changes, start small and move around `0.1` for each change to tune to your pref, 
 ```python
