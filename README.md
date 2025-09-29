@@ -179,6 +179,24 @@ Future improvements may include:
 - Smarter caching for icons/colors
 ## Bugs
 - There is a known issue with Combo cells right now, im working to fix this issue, I just need a photo of every combo cell type in `85x85` pixel res, this would allow me to put those photos into `cells` folder and write code for them into `cell_mapping.json` this file is what tells my code through hex from `.bod`  to which `.png` to grab from `cells` folder.
+- this is how I had my code setup for early testing way before I split the files and still had this code inside the `.py` files. I was thinking about doing more testing on this front since combo cells are a more uniqe form in game and truly could have unlimited possibilities, I was also thinking of just changing the script to know when a combo cell is being used and pull the icon from the `cells` folder and put them all into 1 hexagon, my worry with this is it may become to small and hard to see. 
+```JSON
+{
+  "BODY": { "color": "#A0C8FF", "icon": "Cell_Basic.png" },
+  "SPIK": { "color": "#ffffff",  "icon": "Cell_spike.png" },
+ "LIGT": { "color": "#E9E7A1", "icon": "Cell_lightweight.png" },
+ "BODY+SPIK": { "color": "#FFD888", "icon": "Cell_Combo.png" }
+}  
+```
+### MOD↓ Example of bug
+[![overlay.png](https://i.postimg.cc/kgpLL2bR/overlay.png)](https://postimg.cc/v45PVHXG)
+
+### Ingame↓ Ref
+<img width="1309" height="952" alt="image" src="https://github.com/user-attachments/assets/11f8fc9c-87b1-4807-89eb-045cde7cda90" />
+
+
+
+---
 - Another bug I have is the Icon are not quite as centered in the hexagons as I would like, the **icons** I used are from the Wiki page were I used a script to scrape the page and download them for me, I then removed the background from each image and saved them. But this creates a issue were each `.png` file is not `85x85` like I would want it to be, I can work to fix this also or if I can somehow find out were the dev keeps the images for the ingame icon files, I have zero idea were.
 - the colors for behind the **icons** in the hexagons, well the colors are pretty much random and have zero bearing on each cell, this can be changed and each cell van have a specified color very easily. In `cell_mapping.json`  you can add:  Preferred JSON format (example):`"color": "#A0C8FF",` added to the `.json` file for each cell this will tell my code that this ***hexagon***  needs to be this color if X cell is in that location.
 ```JSON
