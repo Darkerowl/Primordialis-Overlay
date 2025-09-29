@@ -1,15 +1,22 @@
 # Primordialis Overlay
 
 This project provides a live overlay renderer for **Primordialis**, reading the game’s `.bod` save file and producing an **overlay.png** that can be displayed in OBS or other streaming software. This version is considered **beta**: functionality works, but visuals and performance may improve in future updates.
-**This is all done in Pyton 3.13 but should work in Python 3.10 and 3.0 but you have to make sure you download the correct plugins so you can run the mod correctly** ***python 2.0 may work also but idk***
+**This is all done in Pyton 3.13 but should work in Python 3.10 and 3.0 but you have to make sure you download the correct plugins so you can run the mod correctly** ***python 2.0 is not supported anymore so if used files maybe out of date and work work, use at own risk*** *also main.py does a check for pyton 3.0 and the deps, so having 2.0 you will have to download the deps through the code bellow.*
 *Python needs these to run my code, I almost forgot* 
 This will install the following dependencies:
 - `watchdog` → watches for .bod file changes in real time.
 - `lz4` → decompresses the .bod save file.
 - `pillow` → handles PNG image rendering and icons.
 - `numpy` → used for math, arrays, and checksum detection.
-# To download its very easy
+# To download its very easy 
+***Copy and paste into powershell or comand prompt.***
+```bash
 
+pip install watchdog lz4 pillow numpy
+
+pip install black pylint
+
+```
 ---
 
 ## Project Structure
@@ -22,18 +29,19 @@ The repo includes:
   - [bod_parser.py](bod_parser.py) – Reads/decompresses/parses `.bod`
   - [render.py](render.py) – Hex math, colors, icons, combos, PNG writing
   - [watcher.py](watcher.py) – Watchdog + debounce + checksum
-
+  - [required_downloads.py](required_downloads.py)
 - **Batch files (.bat):**
   - [run_once.bat](run_once.bat)
   - [run_once_no_icons.bat](run_once_no_icons.bat)
   - [run_watch.bat](run_watch.md)
-
+  - [Install_requirments.bat](iInstall_requirments.bat)
+  - 
 - **Folders:**
   - `__pycache__` – Python cache files || [pycache](__pycache__)
   - `cells` – Holds all cell PNGs used in rendering  || [cells](cells)
 
 - **Other files:**
-  - cell_mapping.json](cell_mapping.json) – Maps 4-letter cell codes (e.g., `HART`, `SPIK`, `SEEK`) to icon PNGs and `-optional colors-` **read bug section to see**
+  - [cell_mapping.json](cell_mapping.json) – Maps 4-letter cell codes (e.g., `HART`, `SPIK`, `SEEK`) to icon PNGs and `-optional colors-` **read bug section to see**
   -[overlay.png](overlay.png) – The rendered overlay that updates alongside your `.bod`
   - [README.md](README.md) – This document
 
