@@ -18,7 +18,7 @@ The repo includes:
   - [watcher.py](watcher.py) – Watchdog + debounce + checksum
   - [required_downloads.py](required_downloads.py) - This is a `.py script` that will check that you have the right `Python` and `deps`.
 
-  -  **Batch files (.bat):**
+   **Batch files (.bat):**
   - [run_once.bat](run_once.bat)
   - [run_once_no_icons.bat](run_once_no_icons.bat)
   - [run_watch.bat](run_watch.md)
@@ -28,7 +28,7 @@ The repo includes:
   - `__pycache__` – Python cache files || [pycache](__pycache__)
   - `cells` – Holds all cell PNGs used in rendering  || [cells](cells)
 
-- **Other files:**
+**Other files:**
   - [cell_mapping.json](cell_mapping.json) – Maps 4-letter cell codes (e.g., `HART`, `SPIK`, `SEEK`) to icon PNGs and `-optional colors-` **read bug section to see**
   -[overlay.png](overlay.png) – The rendered overlay that updates alongside your `.bod`
   - [README.md](README.md) – This document
