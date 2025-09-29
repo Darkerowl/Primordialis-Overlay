@@ -1,6 +1,7 @@
 # main.py
 import argparse
 import logging
+import sys
 import config as CFG  # import the module so we can override values
 
 from config import (
@@ -12,7 +13,39 @@ from config import (
 
 logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s %(levelname)s: %(message)s")
 
+
+def _depcheck() -> None:
+    """
+    Silent preflight: ensure Python version and required deps are present.
+    - Requires Python 3.8–3.13.
+    - If a dependency is missing, exit with a clear message telling the user to run
+      Required_downloads.py or pip install the packages.
+    """
+    major, minor = sys.version_info[:2]
+    if not (major == 3 and 8 <= minor <= 13):
+        sys.exit(
+            f"Python 3.8–3.13 is required. "
+            f"You are running {major}.{minor}."
+        )
+
+    try:
+        import watchdog  # noqa: F401
+        import lz4.block  # noqa: F401
+        from PIL import Image  # noqa: F401
+        import numpy  # noqa: F401
+    except ImportError as e:
+        pkg = getattr(e, "name", "a required package")
+        sys.exit(
+            "Missing dependency: "
+            f"{pkg}\n"
+            "Run Required_downloads.py (recommended) or install manually with:\n"
+            "    pip install watchdog lz4 pillow numpy\n"
+        )
+
+
 def main():
+    _depcheck()  # verify environment before doing anything else
+
     parser = argparse.ArgumentParser(description="Primordialis overlay renderer")
 
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -43,6 +76,7 @@ def main():
         print(f"Wrote {CFG.OUTPUT_PNG}")
     else:
         watch_loop()
+
 
 if __name__ == "__main__":
     main()
