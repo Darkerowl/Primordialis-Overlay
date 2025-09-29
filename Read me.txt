@@ -1,8 +1,8 @@
 Read me
 BOD_WATCHER_Overlay_INFO Primordialis Overlay Split (v.5) This would be considered Beta since I have it working how I want but the look and way it behaves isn't perfect, there will be more updates.
 
-Make sure you have Python 3.0 downloaded and the dependencies also 
-
+Make sure you have Python 3.8-3.13 any version fron 3.8-3.13 is ok to use, Pyhton is required to run this mod.
+_________
 Copy and paste into powershell or comand prompt.
  !(not needed if you just run_watch -once -once_no_incons.bat) it they all run main.py which has the code for a prompt that will ask you to confirm its okay that the files download, ( I thought it would me a little innapropriate for me to force download files to your pc without your permission or knowlege)
 _________
@@ -16,7 +16,7 @@ The files are only if you are having issues with the prompt when you start the p
 5 .py files, 3 .bat files, 2 folders, 1 .json file, 1 png, 1 Read me.
 Python: config.py, main.py, bod_parser.py, render.py, watcher.py
 .bat files: run_once.bat, run_once_no_icons.bat, run_watch.bat 
--required_downloads.py ( will download the deps and also python in the right version)  !(not needed if you just run_watch -once -once_no_incons.bat)
+-required_downloads.py ( will run along side main.py to do a preflight check to make sure you have the deps and right version of Python downloaded. 
 -Install_requirments.bat ( only instals the deps) !(not needed if you just run_watch -once -once_no_incons.bat)
 
 Folders: _pycache_ , cells
@@ -45,6 +45,18 @@ cells_mapping.json ( This is the .json script that tells the render the hex code
 
 .bat ( This is redundant, but used to run the scripts all of the Python scripts --watch will keep running while once you can make it keep running with 1 small edit or it will run once and close the program great for edits to the config.py file)
 ___________________________________________________________________________________________________________________________________________________________________________________________
+## Setup Info
+#### Treat run_watch.bat as a mini .exe
+You can keep the files anywhere you like. Make backups if you plan to edit.
+
+Important: 
+Python 3.8-3.15is required make sure you download `Python` so the mod will run correctly. *Python `2.0`-> `3.0-3.7` is not supported anymore or the used deps are not on those versions, use at own risk bellow `PY_3.8`.
+Next `main.py` does a check for Pyton 3.8-3.13 and the deps, having none of the deps or Python downloaded will trigger a warning↓. 
+
+Must know↓  
+If you launch-|-|->run_watch.bat-or->run_once.bat-or->run_once_no_incons.bat-|> any one of them first.| They all run main.py with required_downloads.py which has a set prompt and a (y/n) asking you to confirm. -I thought it would me a little innapropriate for me to download python deps onto your pc without permission, no matter how small and harmless they maybe.
+If y the downloads will start in a bash(`CMD`) window, if n you will get a message asking you to download the required files on your own. ->install deps(ill past the code bellow) Install_requirments.bat also has all the deps ready to instal with 2 clicks and you have to install "Python 3.13" on your end.
+
 Instructions: 
 to start you can keep the files can be keeps anywhere that you want them, make sure to keep backups of all them just in case you do edits and don't know how to fix what went wrong if something goes wrong. Cells folder does need to be specified (write the path you have it in the config.py) >please do that. 
 Here is the code for config.py- [\YOUR_USERNAME← is were to put your user folder name in, Its different for every computer.] This makes it were I don't have to restrict you to were the files can go, edit the paths in the code to be put into the config.py and the paths have to be in "" to work, it can also be in any folder you choose on any drive, you just have to reflect that in the path "C:\" is just the main drive for example.] - Fast way to get to >appdata hit> win+r to open >run and >paste this: 
@@ -117,15 +129,69 @@ For faster loading you want it to skip icons (just colors) not quite working how
 
 python main.py --once --no-icons
 
+_pip dep code `CMD` or `powershell`
+
+To download its very easy 
+Copy and paste into powershell or comand prompt and hit enter!
+______
+pip install watchdog lz4 pillow numpy
+
+pip install black pylint
+_______
 
 ___________________________________________________________________________________________________
 Notes:
-Config.py info -look for ( Primordialis config explained.md for a full breakdown of each setting)
 
+Config.py info - see "Primordialis config explained.md" for a detailed breakdown of each setting.
 
-Only functional additions vs your single-file script: argument parsing + --once/--watch modes and a --no-icons toggle. Everything else is a straight move into modules with identical logic.
-Keep your existing cell_mapping.json and icons folder as-is.
-You can still tweak parameters in config.py without touching code.
-If you want, we can add more CLI overrides later (e.g., --hex-size, --rotate-steps ect).
+.bod parsing:
+- Uses retries + debounce to avoid race conditions.
 
-If you want explicit colors for any cell, just add "color": "#RRGGBB" next to "icon" for that entry.
+Render system:
+- Supports both color-only and icon-enhanced overlays.
+- Visuals (hex size, spacing, rotation, etc.) can be tweaked directly in config.py.
+- To explicitly color cells, add a "color": "#RRGGBB" entry in cell_mapping.json next to the "icon" field.
+
+Future improvements:
+- Faster OBS integration (Lua script instead of slideshow hack).
+- More CLI overrides (--hex-size, --rotate-steps, etc.).
+- Smarter caching for icons and colors.
+
+Known Bugs:
+1. Combo cells:
+   - Currently not fully supported.
+   - To fix, I need a screenshot or exported image of every combo cell type at 85x85 pixels.
+   - These would be placed in the "cells" folder and linked in cell_mapping.json.
+   - Without this, the code cannot reliably map every combo type.
+
+2. Icon alignment:
+   - Some icons are not perfectly centered inside the hexagons.
+   - This happens because icons were scraped from the Primordialis Wiki and cleaned up manually.
+   - Each PNG is not guaranteed to be 85x85. Standardizing them would help fix the alignment.
+   - If official game assets for icons could be located, this problem would disappear.
+
+3. Background colors:
+   - Colors behind icons are currently random (hash-derived).
+   - They have no in-game meaning.
+   - This can be fixed by adding explicit color definitions in cell_mapping.json.
+   - Example JSON format:
+
+   {
+     "BODY": { "color": "#A0C8FF", "icon": "Cell_Basic.png" },
+     "SPIK": { "color": "#FFFFFF", "icon": "Cell_Spike.png" },
+     "LIGT": { "color": "#E9E7A1", "icon": "Cell_Lightweight.png" },
+     "BODY+SPIK": { "color": "#FFD888", "icon": "Cell_Combo.png" }
+   }
+
+   This was how I originally tested before splitting into multiple .py files. Each cell could easily have its own specified color.
+
+4. Hexagon spacing:
+   - May look imperfect depending on resolution or screen size.
+   - If hex spacing looks off, adjust SPACING_SCALE in config.py.
+   - Example edits:
+     HEX_GAP = 2.0
+     ICON_INSET = 2.0
+   - Small adjustments like 0.1 are best. Larger values cause drastic changes.
+
+Other:
+- There may be other bugs. Please report them on GitHub so I can patch them quickly.
