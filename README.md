@@ -1,26 +1,12 @@
 # Primordialis Overlay
 
 This project provides a live overlay renderer for **Primordialis**, reading the game’s `.bod` save file and producing an **overlay.png** that can be displayed in OBS or other streaming software. This version is considered **beta**: functionality works, but visuals and performance may improve in future updates.
-**This is all done in Pyton 3.13 but should work in Python 3.10 and 3.0 but you have to make sure you download the correct plugins so you can run the mod correctly** ***python 2.0 is not supported anymore so if used files maybe out of date and work work, use at own risk*** *also main.py does a check for pyton 3.0 and the deps, so having 2.0 you will have to download the deps through the code bellow.*
-*Python needs these to run my code, I almost forgot* 
-This will install the following dependencies:
-- `watchdog` → watches for .bod file changes in real time.
-- `lz4` → decompresses the .bod save file.
-- `pillow` → handles PNG image rendering and icons.
-- `numpy` → used for math, arrays, and checksum detection.
-# To download its very easy 
-***Copy and paste into powershell or comand prompt.***
-```bash
 
-pip install watchdog lz4 pillow numpy
+**This is all done in Pyton 3.13**
 
-pip install black pylint
-
-```
 ---
 
 ## Project Structure
-
 The repo includes:
 
 - **Python files:**
@@ -29,12 +15,13 @@ The repo includes:
   - [bod_parser.py](bod_parser.py) – Reads/decompresses/parses `.bod`
   - [render.py](render.py) – Hex math, colors, icons, combos, PNG writing
   - [watcher.py](watcher.py) – Watchdog + debounce + checksum
-  - [required_downloads.py](required_downloads.py)
-- **Batch files (.bat):**
+  - [required_downloads.py](required_downloads.py) - This is a `.py script` that will download the right `Python` for you and the `deps`, just a easy and fast way to do it if the `.bats` fail for some reason see (**-Setup Info**) bellow for full breakdown.
+
+  -  **Batch files (.bat):**
   - [run_once.bat](run_once.bat)
   - [run_once_no_icons.bat](run_once_no_icons.bat)
   - [run_watch.bat](run_watch.md)
-  - [Install_requirments.bat](iInstall_requirments.bat)
+  - [Install_requirments.bat](iInstall_requirments.bat) - go to (**-Setup Info**) bellow for info on this.
   - 
 - **Folders:**
   - `__pycache__` – Python cache files || [pycache](__pycache__)
@@ -47,14 +34,26 @@ The repo includes:
 
 ---
 
-## Setup Instructions
+---
 
+## Setup Info
+#### Treat run_watch.bat as a mini .exe
 You can keep the files anywhere you like. Make backups if you plan to edit.
+--
+### ⚠️ Important: 
+- Python `3.8-3.15` will work make sure you download Python so the mod will run correctly. *Python `2.0`-> `3.0-3.7` is not supported anymore or the used deps are not on those versions,use at own risk bellow `PY_3.8`.*
+- Next `main.py` does a check for Pyton 3.8-3.13 and the deps, having none of the deps or Python downloaded will trigger a warning↓. 
+---
+### ⚠️ **Must know**↓  
+- If you`launch`-|-|->`run_watch.bat`-or->`run_once.bat`-or->`run_once_no_incons.bat`-|> any one of them first.| They all run [main.py](main.py) which has the codeset to prompt `(y/n)` asking you to confirm. *I thought it would me a little innapropriate for me to force download files to your pc without your permission or knowlege*
+- If `y` the downloads will start in a bash(`CMD`) window, if `n` you will get a message asking you to download the required files on your own. [required_downloads.py](required_downloads.py) , [Install_requirments.bat](iInstall_requirments.bat) *are for if needed.*
+---
 
-⚠️ **Important:** You must edit [Config.py](config.py) to match your system paths.
-
-### Editing `config.py`
-
+---
+# Setup Instructions:
+## Editing `config.py`
+### ⚠️ **Important:** You must edit [Config.py](config.py) to match your system paths.
+---
 Replace `YOUR_USERNAME` with your Windows user folder name. 
 
 Example:
@@ -133,6 +132,19 @@ python main.py --once --no-icons
 
 `--once --no-icons` speeds up rendering by skipping PNG icons (color-only mode).
 
+---
+#pip dep code `CMD` or `powershell`
+
+*To download its very easy* 
+***Copy and paste into powershell or comand prompt.***
+
+```bash
+
+pip install watchdog lz4 pillow numpy
+
+pip install black pylint
+
+```
 ---
 
 ## OBS Setup
