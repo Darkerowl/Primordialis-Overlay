@@ -42,7 +42,7 @@
   "SELF": { "icon": "Cell_selfcolliding.png" },
   "GATE": { "icon": "Cell_blocker.png" },
   "BREK": { "icon": "Cell_decoupler.png" },
-  "HDET": { "icon": "Cell_Hmonitor.png" },
+  "HDET": { "icon": "Cell_hmonitor.png" },
   "SPED": { "icon": "Cell_speedometer.png" },
   "JETT": { "icon": "Cell_thruster.png" },
   "ACID": { "icon": "Cell_acid.png" },
@@ -66,4 +66,5 @@
   "ROOT": { "icon": "Cell_root.png" },
   "PORT": { "icon": "Cell_waypoint.png" }
 }
+
 
