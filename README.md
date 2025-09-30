@@ -169,10 +169,10 @@ OBS doesn’t support live-updating images directly. Workaround: use a **Slidesh
 ##✅ Final Checklist
  - ✅ overlay.png + cell_mapping.json in save dir
  - - ✅✅  Correct paths in config.py (username + icons dir)
--✅ Python 3.8 through 3.13x installed (1 version)
-- - ✅ ✅  Run run_watch.bat (or one of the other .bat) it will instal the - Deps(pip install watchdog lz4 pillow numpy) *or install them on your own.
-- ✅ OBS slideshow configured
-- ✅  Run run_watch.bat and enjoy!
+ - ✅ Python 3.8 through 3.13x installed (1 version)
+ - - ✅ ✅  Run run_watch.bat (or one of the other .bat) it will instal the - Deps(pip install watchdog lz4 pillow numpy) *or install them on your own.
+ - ✅ OBS slideshow configured
+ - ✅  Run run_watch.bat and enjoy!
 ---
 
 ## Notes
