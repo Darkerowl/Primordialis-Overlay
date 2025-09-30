@@ -5,7 +5,7 @@ import logging
 BOD_PATH = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\player.bod"  #←
 OUTPUT_PNG = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\overlay.png" #←
 TEMP_OUTPUT = OUTPUT_PNG + ".tmp"
-ICONS_DIR = r"C:\Users\YOUR_USERNAME\Pictures\Twitch\Primordialis\cells" #←
+ICONS_DIR = r"C:\Users\YOUR_USERNAME\Documents\Primordialis Overlay Mod\cells" #← This one can be anywhere you choose it just needs to have the path you put it in . Path here is a example
 MAPPING_JSON = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\cell_mapping.json" #←
 
 # Visuals / Scale / Orientation
@@ -49,4 +49,5 @@ LOG_LEVEL = logging.INFO
 
 # Feature flags
 ICONS_ENABLED = True # can be turned off via CLI
+
 
