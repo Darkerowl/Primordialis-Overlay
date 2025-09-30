@@ -1,6 +1,6 @@
 {
   "CRAB": { "icon": "Cell_cancer.png" },
-  "BODY": { "icon": "Cell_Basic.png" },
+  "BODY": { "icon": "Cell_basic.png" },
   "SWIM": { "icon": "Cell_speedy.png" },                        
   "SEEK": { "icon": "Cell_seeker.png" },
   "TRG0": { "icon": "Cell_input.png" },
@@ -24,7 +24,7 @@
   "THRM": { "icon": "Cell_thermoelectric.png" },
   "AAMP": { "icon": "Cell_lightning.png" },                        
   "SPIK": { "icon": "Cell_spike.png" },
-  "HAMR": { "icon": "Cell_hammer.png" },                        
+  "HAMR": { "icon": "Cell_impact.png" },                        
   "BOMB": { "icon": "Cell_explosive.png" },
   "SUCK": { "icon": "Cell_vacuum.png" },
   "STAY": { "icon": "Cell_stasis.png" },
@@ -45,11 +45,11 @@
   "HDET": { "icon": "Cell_Hmonitor.png" },
   "SPED": { "icon": "Cell_speedometer.png" },
   "JETT": { "icon": "Cell_thruster.png" },
-  "ACID": { "icon": "Cell_Acid.png" },
+  "ACID": { "icon": "Cell_acid.png" },
   "INKY": { "icon": "Cell_ink.png" },                         
   "LECH": { "icon": "Cell_leech.png" },
   "INJC": { "icon": "Cell_infusion.png" },
-  "XPST": { "icon": "Cell_Experience_Stealing.png" },
+  "XPST": { "icon": "Cell_experience_stealing.png" },
   "VENM": { "icon": "Cell_venom.png" },
   "POIS": { "icon": "Cell_poison.png" },
   "ANGY": { "icon": "Cell_angry.png" },
@@ -60,9 +60,10 @@
   "WAIT": { "icon": "Cell_hesitant.png" },
   "MIND": { "icon": "Cell_mind_control.png" },
   "PHAS": { "icon": "Cell_phasing.png" },
-  "EMAG": { "icon": "Cell_Magnetic.png" },
+  "EMAG": { "icon": "Cell_magnetic.png" },
   "WALL": { "icon": "Cell_anchor.png" },
   "OPTO": { "icon": "Cell_electric_isolator.png" },                         
   "ROOT": { "icon": "Cell_root.png" },
-  "PORT": { "icon": "Cell_Waypoint.png" }
+  "PORT": { "icon": "Cell_waypoint.png" }
 }
+
