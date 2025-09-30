@@ -1,12 +1,12 @@
 # Config
 import logging
 
-# Paths (change if yours differ)
-BOD_PATH = r"C:\Users\camer\AppData\Roaming\Primordialis\save\player.bod"
-OUTPUT_PNG = r"C:\Users\camer\AppData\Roaming\Primordialis\save\overlay.png"
+# Paths (change if yours differ) ↓ EDIT (YOUR_USERNAME\) WITH YOUR PATHS TO THE FILES ↓
+BOD_PATH = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\player.bod"  #←
+OUTPUT_PNG = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\overlay.png" #←
 TEMP_OUTPUT = OUTPUT_PNG + ".tmp"
-ICONS_DIR = r"C:\Users\camer\Pictures\Twitch\Primordialis\cells"
-MAPPING_JSON = r"C:\Users\camer\AppData\Roaming\Primordialis\save\cell_mapping.json"
+ICONS_DIR = r"C:\Users\YOUR_USERNAME\Pictures\Twitch\Primordialis\cells" #←
+MAPPING_JSON = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\cell_mapping.json" #←
 
 # Visuals / Scale / Orientation
 IMAGE_BG = (0, 0, 0, 0)  # RGBA
@@ -49,3 +49,4 @@ LOG_LEVEL = logging.INFO
 
 # Feature flags
 ICONS_ENABLED = True # can be turned off via CLI
+
