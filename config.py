@@ -10,9 +10,9 @@ MAPPING_JSON = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\cell_m
 
 # Visuals / Scale / Orientation
 IMAGE_BG = (0, 0, 0, 0)  # RGBA
-HEX_SIZE = 22            # hex radius in px (increase to zoom)
+HEX_SIZE = 25            # hex radius in px (increase to zoom)
 ICON_SCALE = 1.09        # icon fits within 2*radius*ICON_SCALE box
-PADDING = 120            # border padding to avoid cropping
+PADDING = 180            # border padding to avoid cropping
 DEFAULT_COLOR = (160, 160, 160, 255)
 HEX_GAP = 2.0            # pixels shaved off the hex radius (1–3 typical)
 ICON_INSET = 2.0         # extra inset so icons don’t touch borders
@@ -49,5 +49,6 @@ LOG_LEVEL = logging.INFO
 
 # Feature flags
 ICONS_ENABLED = True # can be turned off via CLI
+
 
 
