@@ -39,9 +39,9 @@ DEBUG_LABELS = False
 ASSUME_BOUNDS_INCLUSIVE = False # spec says width = ux - lx
 
 # Behavior/perf
-DEBOUNCE_SECONDS = 0.3
+DEBOUNCE_SECONDS = 0.3 # Dont lower it will break the parser.py
 READ_RETRY = 3
-READ_RETRY_DELAY = 0.3 
+READ_RETRY_DELAY = 0.3 # Dont lower it will break the parser.py
 RENDER_WIDTH = 0 # 0 = autosize; else force width and scale height
 RENDER_HEIGHT = 0
 LOG_LEVEL = logging.INFO
@@ -49,6 +49,7 @@ LOG_LEVEL = logging.INFO
 
 # Feature flags
 ICONS_ENABLED = True # can be turned off via CLI
+
 
 
 
