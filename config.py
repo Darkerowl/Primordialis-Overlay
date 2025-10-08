@@ -11,14 +11,14 @@ MAPPING_JSON = r"C:\Users\YOUR_USERNAME\AppData\Roaming\Primordialis\save\cell_m
 # Visuals / Scale / Orientation
 IMAGE_BG = (0, 0, 0, 0)  # RGBA
 HEX_SIZE = 25            # hex radius in px (increase to zoom)
-ICON_SCALE = 1.09        # icon fits within 2*radius*ICON_SCALE box
-PADDING = 180            # border padding to avoid cropping
+ICON_SCALE = 1.10        # icon fits within 2*radius*ICON_SCALE box
+PADDING = 200            # border padding to avoid cropping
 DEFAULT_COLOR = (160, 160, 160, 255)
 HEX_GAP = 2.0            # pixels shaved off the hex radius (1–3 typical)
 ICON_INSET = 2.0         # extra inset so icons don’t touch borders
 
 SPACING_SCALE = 0.92     # how tightly hex centers are packed
-SUPERSAMPLE = 2          # supersampling factor for smoother edges
+SUPERSAMPLE = 1          # supersampling factor for smoother edges, change to (2) if your system can handle it (3) if you want flawless render
 
 # Alignment
 USE_FLAT_TOP = False # False = pointy-topof the hexagons (Primordialis default) True= top of hex will be flat.
@@ -49,6 +49,7 @@ LOG_LEVEL = logging.INFO
 
 # Feature flags
 ICONS_ENABLED = True # can be turned off via CLI
+
 
 
 
