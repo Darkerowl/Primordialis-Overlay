@@ -424,7 +424,7 @@ Place icons in `ICONS_DIR`. Relative icon paths are resolved against [cell_mappi
 ---
 **end**
 ---
-#Tip 
+# Tips 
 ---
 ***Links*** *click images to go to them*
 
