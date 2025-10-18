@@ -1,4 +1,4 @@
-##### !Mod is ready 9/29/25, but I have not fixed bugs bellow yet)
+##### !Mod is ready 9/29/25, but I have not fixed bugs bellow yet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "↑Click↑"
 
 
 # Primordialis Overlay
