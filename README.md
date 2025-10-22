@@ -7,6 +7,7 @@ This project provides a live overlay renderer for **Primordialis**, reading the 
 #### Must have Python to use this mod 
 **This is all coded in in [Python 3.13](https://www.python.org/downloads/release/python-3137/)** 
 - Python `3.8` through `3.13x` will work with this mod.
+- Make sure to have `PIP activated` when downloading Python, if you run into issues getting the `PIP` installed let me know and Ill setup a info doc for how to fix the issues involved
 ---
 
 ## Project Structure
