@@ -178,7 +178,8 @@ OBS doesn’t support live-updating images directly. Workaround: use a **Slidesh
 [Bugs](Doc/Bugs.md)
 ---
 # Mod Config Explained
-[Config python info](Doc/Mod config_py explained.md)
+[Config info](Doc/Mod config.py info.md)
+---
 
 ## Notes
 
