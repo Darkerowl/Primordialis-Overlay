@@ -166,7 +166,7 @@ OBS doesn’t support live-updating images directly. Workaround: use a **Slidesh
    - **Playback Mode:** Loop
    - **Bounding Size/Aspect Ratio:** e.g. `800x800` (any size; image scales)
 ---
-##✅ Final Checklist
+## ✅ Final Checklist
  - ✅ overlay.png + cell_mapping.json in save dir
  - - ✅✅  Correct paths in config.py (username + icons dir)
  - ✅ Python 3.8 through 3.13x installed (1 version)
@@ -178,7 +178,7 @@ OBS doesn’t support live-updating images directly. Workaround: use a **Slidesh
 [Bugs](Doc/Bugs.md)
 ---
 # Mod Config Explained
-[Config info](Doc/Mod config.py info.md)
+[Mod config.py info](Doc/Mod config.py info.md)
 ---
 
 ## Notes
