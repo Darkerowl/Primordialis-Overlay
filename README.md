@@ -1,7 +1,7 @@
 `Click→` To NAV <img width="157" height="83" alt="image" src="https://github.com/user-attachments/assets/9ff77903-dd78-45d3-9fcb-2dcb7d40165a" /> **For dropdown to all sections**  `→↑`
 
 # $\color{blue}{\text{Primordialis Overlay}}$
-$\color{blue}{\text{Primordialis Overlay}}$
+$\color{red}{\text{Primordialis Overlay}}$
 This project provides a live overlay renderer for **Primordialis**, reading the game’s `.bod` save file and producing an **overlay.png** that can be displayed in OBS or other streaming software. This version is considered **beta**: functionality works, but visuals and performance may improve in future updates.
 
 #### Must have Python to use this mod 
@@ -174,6 +174,11 @@ OBS doesn’t support live-updating images directly. Workaround: use a **Slidesh
  - ✅ OBS slideshow configured
  - ✅  Run run_watch.bat and enjoy!
 ---
+# Bugs File
+[Bugs](Doc/Bugs.md)
+---
+# Mod Config Explained
+[Config.py info](Doc/Mod config_py explained.md)
 
 ## Notes
 
