@@ -174,14 +174,14 @@ OBS doesn’t support live-updating images directly. Workaround: use a **Slidesh
  - ✅ OBS slideshow configured
  - ✅  Run run_watch.bat and enjoy!
 ---
-# Bugs File
+### Bugs File
 [Bugs](Doc/Bugs.md)
 
----
-
-# Mod Config.py Explained
-
+### Mod Config.py Explained
 [Config info](Doc/config_info.md)
+
+### Notes
+[]
 
 ---
 
